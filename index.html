@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title class="title">모던민화</title>
+  <script src="https://kit.fontawesome.com/e9dfc8ac3b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/manuBar.css">
+
+  <link rel="icon" href="./favicon.ico"/>
+</head>
+
+<body> 
+  <style> /* 모든 페이지에 필요한 css */
+    * { /* 화면초기화, 글씨체 설정 */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Stylish', sans-serif;
+    }
+
+    body { /*배경*/
+      background: url(./images/watercolor.jpg) no-repeat right bottom fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+  </style>
+
+  <div class="navigation"> <!-- 모든 페이지에 필요한 네비바 -->
+    <ul>
+      <li id="home">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li id="about"> 
+        <a href="./html/about.html">
+          <span class="icon"><i class="fa-solid fa-user"></i></span> 
+          <span class="title">About</span>  
+        </a> 
+      </li>
+      <li id="works"> 
+        <a href="./html/works.html" onclick="location.href='./html/works.html'">
+          <span class="icon"><i class="fa-solid fa-briefcase"></i></span> 
+          <span class="title">Works</span>  
+        </a> 
+      </li>
+      <li id="activity"> 
+        <a href="./html/activity.html">
+          <span class="icon"><i class="fa-solid fa-palette"></i></span> 
+          <span class="title">Activity</span>  
+        </a> 
+      </li>
+      <li id="contact"> 
+        <a href="./html/contact.html">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span> 
+          <span class="title">Contact</span>  
+        </a> 
+      </li>
+    </ul>
+  </div>
+
+  <div class="toggle" onclick="toggleMenu()"></div>
+  <script type="text/javascript">
+    function toggleMenu(){
+      let navigation = document.querySelector('.navigation');
+      let toggle = document.querySelector('.toggle');
+      navigation.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
+
+  <div class='h1'>    
+    <h1 title="모던민화를 소개합니다.">모던민화를 소개합니다.</h1>    
+  </div>
+  
+</body>
+</html>
